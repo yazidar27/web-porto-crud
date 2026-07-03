@@ -4,6 +4,7 @@ import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Certifications from "@/components/sections/Certifications";
 import Achievements from "@/components/sections/Achievements";
+import Programs from "@/components/sections/Programs";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Hero />
       <About />
       <Skills />
+      <Programs />
       <Projects />
       <Certifications />
       <Achievements />
