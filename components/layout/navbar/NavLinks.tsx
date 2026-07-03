@@ -1,21 +1,20 @@
-import Link from "next/link";
-import { NAV_LINKS } from "@/constants/navigation";
+import Container from "../Container";
+import Logo from "../Logo";
+import NavLinks from "./NavLinks";
+import ResumeButton from "./ResumeButton";
 
-export default function NavLinks() {
+export default function Navbar() {
   return (
-    <nav>
-      <ul className="flex items-center gap-8">
-        {NAV_LINKS.map((link) => (
-          <li key={link.href}>
-            <Link
-              href={link.href}
-              className="text-sm font-medium transition-colors hover:text-blue-600"
-            >
-              {link.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <header className="sticky top-4 z-50">
+      <Container>
+        <div className="flex items-center justify-between rounded-2xl border border-border/60 bg-background/80 px-6 py-4 backdrop-blur-xl shadow-sm">
+          <Logo />
+
+          <NavLinks />
+
+          <ResumeButton />
+        </div>
+      </Container>
+    </header>
   );
 }
